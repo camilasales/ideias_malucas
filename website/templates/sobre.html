@@ -4,14 +4,15 @@
 
 
 <h1>Listagem das Ideas</h1>
-<p>
+        <p>
         {% for ideia in ideias %}
                 <p>{{ideia.pessoa.nome}}</p>
                 <p>{{ideia.titulo}}</p>
                 <p>{{ideia.categoria}}</p>
                 <p>{{ideia.descricao}}</p>
+                <a href="/remover_ideia/{{ideia.id}}"><input type="button" value="Deletar"></a>
                 <hr>
         {% endfor %}
-</p>
+        </p>
 
 {% endblock %}

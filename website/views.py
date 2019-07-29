@@ -22,7 +22,7 @@ def index(request):
 
 def sobre(request):
     #essa página vai listar as ideias e seus criadores
-    ideias = Ideia.objects.all()
+    ideias = Ideia.objects.filter(ativo=True).all()
     contexto = {
         'ideias':ideias
     }
@@ -67,3 +67,13 @@ def cadastrar_ideia(request):
             return redirect('/sobre') 
 
     return render(request, 'ideias.html', {}) 
+
+def remover_ideia(request, id):
+    ideia = Ideia.objects.filter(id=id).first()
+    if ideia is not None:
+        ideia.ativo = False
+        ideia.save()
+        return redirect('/sobre') 
+
+    return render(request, 'sobre.html', {'msg':'Ops! não deu certo'})
+
