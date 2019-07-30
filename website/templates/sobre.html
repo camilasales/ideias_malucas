@@ -1,18 +1,19 @@
 {% extends 'shared/layout.html' %}
 
 {% block conteudo %}
-
-
-<h1>Listagem das Ideas</h1>
+<h2>Listagem das Ideas</h2>
+<div class="fundo">
+        
         <p>
-        {% for ideia in ideias %}
-                <p>{{ideia.pessoa.nome}}</p>
-                <p>{{ideia.titulo}}</p>
-                <p>{{ideia.categoria}}</p>
+                {% for ideia in ideias %}
+                <p>Nome: {{ideia.pessoa.nome}}</p>
+                <p>Títullo Ideia: {{ideia.titulo}}</p>
+                <p>Categoria: {{ideia.categoria}}</p>
                 <p>{{ideia.descricao}}</p>
                 <a href="/remover_ideia/{{ideia.id}}"><input type="button" value="Deletar"></a>
                 <hr>
-        {% endfor %}
+                {% endfor %}
         </p>
+</div>
 
 {% endblock %}

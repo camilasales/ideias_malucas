@@ -1,4 +1,96 @@
 body{
-    background-color: #f1f1f1;
-    color: red;
+    margin: 0;
+    background-image: url('/static/img/fundo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Neucha', cursive;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Barriecito', cursive;
+    color: #1B578C;
+    font-size: 4rem;
+    padding: 15px;
+}
+h2{
+    color: #048ABF;
+}
+header{
+    grid-area: header;
+    
+    
+}
+section{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+}
+.login{
+    align-items: center;
+}
+
+form{
+    display: grid;
+    grid-template-areas: 'um um '
+                        'dois dois'
+                        'tres tres';
+    
+    grid-template-rows: 20vh 40vh 15vh;
+    grid-template-columns: 15vw 15vw ;
+
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: 25px;
+    padding-top: 20px;
+    color: #048ABF;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+}
+
+.bio{
+    grid-area: dois;
+    align-items: unset;
+}
+.botao{
+    grid-area: tres;
+}
+
+input, select{
+    padding: 5px;
+}
+
+input[type='submit'], [type='button']{
+    margin:0;
+    border: none;
+    padding: 12px;
+    width: 50%;
+    border-radius: 15px 15px 15px 15px;
+    font-size: 15px;
+    background-color: #1B578C;
+}
+
+.fundo{
+    background-color: #F2D06B;
+}
+p{
+    color: #D93636;
+    font-family: 'Neucha', cursive;
+    font-size: 20px;
+}
+.ideia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
