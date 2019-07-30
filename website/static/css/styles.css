@@ -1,5 +1,12 @@
 body{
     margin: 0;
+    display: grid;
+    grid-template-areas: 'header header header header '
+                        'section section section section'
+                        'footer footer footer footer';
+    
+    grid-template-rows: 25vh 25vh 25vh ;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
     background-image: url('/static/img/fundo.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -94,3 +101,76 @@ p{
     align-items: center;
     justify-content: center;
 }
+
+@media (max-width: 1200px){
+    form{
+        display: grid;
+        grid-template-areas: 'um um '
+                            'dois dois'
+                            'tres tres';
+        
+        grid-template-rows: 15vh 35vh 5vh;
+        grid-template-columns: 10vw 10vw ;
+    
+        justify-content: center;
+        align-items: center;
+    }
+    label{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    input[type='submit'], [type='button']{
+        margin:0;
+        border: none;
+        padding: 12px;
+        width: 40%;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 10px;
+        background-color: #1B578C;
+    }
+    
+}
+@media (max-width: 854px){
+    form{
+        display: grid;
+        grid-template-areas: 'um um '
+                            'dois dois'
+                            'tres tres'
+                            'quatro quatro';
+        
+        grid-template-rows: 25vh 25vh 25vh 25vh;
+        grid-template-columns: 10vw 10vw ;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .um{
+        grid-area: um;
+    }
+    .dois{
+        grid-area: dois;
+    }
+    .bio{
+        grid-area: tres;
+    }
+    label{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    .botao{
+        grid-area: quatro;
+    }
+    input[type='submit'], [type='button']{
+        margin:0;
+        border: none;
+        padding: 8px;
+        width: 70px;;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 10px;
+        background-color: #1B578C;
+    }
+}
+@media(max-width: 654px){
+   
+} 
